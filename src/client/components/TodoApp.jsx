@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component, PropTypes, findDOMNode } from 'react';
+import React, { Component, PropTypes } from 'react';
 import TodoList from 'client/components/TodoList';
 import * as todoMutations from '../mutations/todo';
 import { createSmartComponent } from 'adrenaline';
