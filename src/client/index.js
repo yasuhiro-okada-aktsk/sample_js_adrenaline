@@ -9,12 +9,13 @@ import routes from './routes';
 import { Adrenaline } from 'adrenaline';
 import schema from 'shared/schema';
 import Loader from './components/Loader';
+import {finalCreateStore as createStore} from './store/createStore'
 
 console.log(schema.getTypeMap());
 
 const rootNode = document.getElementById('root');
 ReactDOM.render(
-  <Adrenaline schema={schema} renderLoading={Loader}>
+  <Adrenaline schema={schema} renderLoading={Loader} createStore={createStore} >
     {() => <Router history={history} children={routes} />}
   </Adrenaline>,
   rootNode
